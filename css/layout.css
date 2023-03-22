@@ -1,0 +1,55 @@
+/* layout.css */
+.fullCnt1 .img_cnt_01 {opacity: 0; transition: all 0.7s;}
+.fullCnt1 .txt_title {top: 128px; left: 29px; transform: translate3d(-100%, 0, 0) skewX(30deg); opacity: 0;}
+/* 게이지 */
+.fullCnt1 .act_line {top: 88px; right: 114px; overflow: hidden; height: 0;}
+.fullCnt1 .gaugeWrap {top: 75px; right: 245px;}
+.fullCnt1 .gaugeWrap li {position: absolute; opacity: 0; transition: all 0.1s;}
+.fullCnt1 .gaugeWrap li:nth-child(1) {top: -5px; left: -79px;}
+.fullCnt1 .gaugeWrap li:nth-child(2) {top: 62px; left: 20px;}
+.fullCnt1 .gaugeWrap li:nth-child(3) {top: 162px; left: 92px;}
+.fullCnt1 .gaugeWrap li:nth-child(4) {top: 282px; left: 126px;}
+.fullCnt1 .gaugeWrap li:nth-child(5) {top: 403px; left: 118px;}
+.fullCnt1 .gaugeWrap li:nth-child(6) {top: 508px; left: 74px;}
+/* 달 변경 */
+.fullCnt1 .monthWrap {width: 250px; height: 250px; border-radius: 50%; top: 283px; left: 538px; text-align: center; opacity: 0;}
+.fullCnt1 .txtMonthWrap {position: relative; width: 109px; height: 105px; margin: 0 auto;}
+.fullCnt1 .monthWrap:before {content:""; display: inline-block; width: 0; height: 100%; vertical-align: middle;}
+.fullCnt1 .txtBox {display: inline-block; vertical-align: middle; position: relative; left: 2px;}
+.fullCnt1 .txtBox > span {display: block; text-align: center; margin-top: 10px;}
+.fullCnt1 .txtMonthWrap li {width: 100%; text-align: center; position: absolute; top: 0; left: 0; opacity: 0; transition: all 0.1s;}
+.fullCnt1 .txtMonthWrap li img {position: relative; left: -10px;}
+/* 특징 */
+.fullCnt1 .benefitWrap {top: 595px; left: 84px;}
+.fullCnt1 .benefitWrap:after {content:""; display: block; clear: both;}
+.fullCnt1 .benefitWrap li {float: left; opacity: 0; transition: all 0.4s;}
+.fullCnt1 .benefitWrap li:nth-child(2) {margin: -1px 0 0 64px;}
+.fullCnt1 .benefitWrap li:nth-child(3) {margin: 4px 0 0 52px;}
+.fullCnt1 .benefitWrap li:nth-child(4) {margin: -1px 0 0 60px;}
+/* animation */
+.fullCnt1 .txt_title.on {animation: lightSpeedInLeft ease-out .3s forwards;}
+.fullCnt1 .img_cnt_01.on {opacity: 1;}
+.fullCnt1 .gaugeWrap li.on {opacity: 1;}
+.fullCnt1 .benefitWrap li.on{opacity: 1;}
+.fullCnt1 .txtMonthWrap li.on {opacity: 1;}
+
+@keyframes lightSpeedInLeft {
+  from {
+    transform: translate3d(-150%, 0, 0) skewX(30deg);
+    opacity: 0;
+  }
+
+  60% {
+    transform: skewX(-40deg);
+    opacity: 1;
+  }
+
+  85% {
+    transform: skewX(3deg);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
